@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<settings version="1">
+    <section id="service.osdonplayback">
+        <category help="" id="general" label="32020">
+            <group id="1">
+                <setting help="" id="osdonplayback_enable" label="32021" type="boolean">
+                    <level>0</level>
+                    <default>true</default>
+                    <control type="toggle"/>
+                </setting>
+                <setting help="" id="osdonplayback_seconds" label="32024" type="integer">
+                    <level>0</level>
+                    <default>3</default>
+                    <constraints>
+                        <minimum>1</minimum>
+                        <step>1</step>
+                        <maximum>15</maximum>
+                    </constraints>
+					<control type="slider" format="integer">
+                        <popup>false</popup>
+                    </control>
+                </setting>
+            </group>
+        </category>
+    </section>
+</settings>

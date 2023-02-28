@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addons><addon id="repository.bower9065" name="bower9065" version="1.0" provider-name="bower9065">
+    <extension point="xbmc.addon.repository" name="Example Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/bower9065/repository.bower9065/master/repo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/bower9065/repository.bower9065/master/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/bower9065/repository.bower9065/master/repo/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>bower9065</summary>
+        <description />
+        <disclaimer />
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="service.osdonplayback" name="'OSD'onPlayBack" version="1.0" provider-name="Bower9065">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="service.py" />
+  <extension point="xbmc.addon.metadata">
+    <assets>
+        <icon>resources/media/icon.png</icon>
+        <fanart>resources/media/fanart.jpg</fanart>
+        <screenshot>resources/media/Screenshot01.jpg</screenshot>
+        <screenshot>resources/media/Screenshot02.jpg</screenshot>
+
+    </assets>
+    <platform>all</platform>
+    <source>https://github.com/bower9065/bower9065.github.io/tree/master/repo/service.osdonplayback</source>
+    <summary lang="en_GB">Displays Video OSD on video playback.</summary>
+    <description lang="en_GB">Auto display Video OSD at the beginning of video playback for an adjustable amount of seconds.</description>
+  </extension>
+</addon></addons>
