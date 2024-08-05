@@ -1,3 +1,6 @@
 [submodule "skin.estuary.mod_v2"]
 	path = skin.estuary.mod_v2
 	url = https://github.com/bower9065/skin.estuary.mod_v2
+[submodule "script.estuary.mod_v2_theme_selector"]
+	path = script.estuary.mod_v2_theme_selector
+	url = https://github.com/bower9065/script.estuary.mod_v2_theme_selector
