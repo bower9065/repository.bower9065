@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.bower9065" name="Bower9065 Add-on Repository" version="1.0.0" provider-name="Bower9065">
+	<extension point="xbmc.addon.repository" name="Bower9065 Add-on Repository">
+	<dir>
+		<info compressed="false">https://raw.githubusercontent.com/bower9065/kodi.addons/main/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/bower9065/kodi.addons/main/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/bower9065/kodi.addons/main/</datadir>
+	</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Kodi Addons by Bower9065</summary>
+		<description>This repository contains addons and mods by Bower9065.</description>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart></fanart>
+			<screenshot></screenshot>
+		</assets>
+	</extension>
+</addon>
