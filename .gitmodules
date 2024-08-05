@@ -4,3 +4,6 @@
 [submodule "script.estuary.mod_v2_theme_selector"]
 	path = script.estuary.mod_v2_theme_selector
 	url = https://github.com/bower9065/script.estuary.mod_v2_theme_selector
+[submodule "service.kodi_playlist_resumer"]
+	path = service.kodi_playlist_resumer
+	url = https://github.com/bower9065/service.kodi_playlist_resumer
