@@ -4,4 +4,4 @@ _You can install it via repository to provide automatic updates (future updates 
 
 - Download repository: [repository.bower9065](https://github.com/bower9065/repository.hooty/blob/main/repository.bower9065-1.0.zip?raw=true)
 - Or install it via Kodi file-manager
-  - add source: <https://https://bower9065.github.io/repository.bower9065/>
+  - add source: <https://bower9065.github.io/repository.bower9065/>
