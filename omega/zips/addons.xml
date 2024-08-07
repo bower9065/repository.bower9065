@@ -79,20 +79,19 @@ Example call-service:
 		<platform>all</platform>
 		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
 		<source>https://github.com/b-jesch/skin.estuary.modv2/tree/Omega</source>
-		<assets>
-			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart.jpg</fanart>
-			<screenshot>resources/screenshots/screenshot_1.png</screenshot>
-			<screenshot>resources/screenshots/screenshot_2.png</screenshot>
-			<screenshot>resources/screenshots/screenshot_5.png</screenshot>
-			<screenshot>resources/screenshots/screenshot_7.png</screenshot>
-			<screenshot>resources/screenshots/screenshot_8.png</screenshot>
-			<screenshot>resources/screenshots/screenshot_9.png</screenshot>
-			<screenshot>resources/screenshots/screenshot_10.png</screenshot>
-			<screenshot>resources/screenshots/screenshot_13.png</screenshot>
-			<screenshot>resources/screenshots/screenshot_14.png</screenshot>
-			<screenshot>resources/screenshots/screenshot_15.png</screenshot>
-		</assets>
-        <news />
+			<assets>
+				<icon>resources/icon.png</icon>
+				<fanart>resources/fanart.jpg</fanart>
+				<screenshot>resources/screenshots/screenshot_1.png</screenshot>
+				<screenshot>resources/screenshots/screenshot_2.png</screenshot>
+				<screenshot>resources/screenshots/screenshot_5.png</screenshot>
+				<screenshot>resources/screenshots/screenshot_7.png</screenshot>
+				<screenshot>resources/screenshots/screenshot_8.png</screenshot>
+				<screenshot>resources/screenshots/screenshot_9.png</screenshot>
+				<screenshot>resources/screenshots/screenshot_10.png</screenshot>
+				<screenshot>resources/screenshots/screenshot_13.png</screenshot>
+				<screenshot>resources/screenshots/screenshot_14.png</screenshot>
+				<screenshot>resources/screenshots/screenshot_15.png</screenshot>
+			</assets>
 	</extension>
 </addon></addons>
