@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<include name="Snow Halloween">
+		<control type="group">
+		<visible>Skin.HasSetting(EnableSnowEffect) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Halloween) + !Window.IsVisible(FullScreenVideo) + !Window.IsActive(visualisation)</visible>
+			<control type="group">
+					<left>-100</left>
+					<!-- Use this to space all the groups -->
+					<animation effect="rotate" end="20" time="10000" delay="300" pulse="true" condition="true">Conditional</animation>
+					<control type="image">
+						<left>40</left>
+						<top>-180</top>
+						<width>59</width>
+						<height>59</height>
+						<texture>pumpkin_1.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>100</left>
+						<top>-100</top>
+						<width>38</width>
+						<height>38</height>
+						<texture>pumpkin_3.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>200</left>
+						<top>-40</top>
+						<width>30</width>
+						<height>30</height>
+						<texture>pumpkin_2.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>260</left>
+						<top>-80</top>
+						<width>35</width>
+						<height>35</height>
+						<texture>pumpkin_2.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="13000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>390</left>
+						<top>-210</top>
+						<width>17</width>
+						<height>17</height>
+						<texture>pumpkin_1.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<left>125</left>
+					<!-- -Use this to space all the groups- -->
+					<animation effect="rotate" start="20" end="40" time="9000" delay="800" pulse="true" condition="true">Conditional</animation>
+					<control type="image">
+						<left>80</left>
+						<top>-100</top>
+						<width>28</width>
+						<height>28</height>
+						<texture>pumpkin_3.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="8000" delay="1000" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>240</left>
+						<top>-40</top>
+						<width>42</width>
+						<height>42</height>
+						<texture>pumpkin_1.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="8000" delay="1800" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>390</left>
+						<top>-210</top>
+						<width>30</width>
+						<height>30</height>
+						<texture>pumpkin_2.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="12000" delay="1500" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="30,0" end="-70,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<left>550</left>
+					<!-- -Use this to space all the groups- -->
+					<top>-200</top>
+					<animation effect="rotate" end="15" time="7000" delay="500" pulse="true" condition="true">Conditional</animation>
+					<control type="image">
+						<left>20</left>
+						<top>-60</top>
+						<width>20</width>
+						<height>20</height>
+						<texture>pumpkin_3.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>100</left>
+						<top>-190</top>
+						<width>48</width>
+						<height>48</height>
+						<texture>pumpkin_1.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="9000" delay="2000" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-60,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>260</left>
+						<top>-80</top>
+						<width>14</width>
+						<height>14</height>
+						<texture>pumpkin_2.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="8000" delay="2300" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>330</left>
+						<top>-110</top>
+						<width>97</width>
+						<height>97</height>
+						<texture>pumpkin_1.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>390</left>
+						<top>-110</top>
+						<width>30</width>
+						<height>30</height>
+						<texture>pumpkin_3.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="12000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="-30,0" end="60,0" time="3300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<left>825</left>
+					<!-- -Use this to space all the groups- -->
+					<animation effect="rotate" start="15" end="30" time="12000" delay="300" pulse="true" condition="true">Conditional</animation>
+					<control type="image">
+						<left>100</left>
+						<top>-200</top>
+						<width>26</width>
+						<height>26</height>
+						<texture>pumpkin_1.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="8000" delay="3000" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>200</left>
+						<top>-40</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>pumpkin_2.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="13000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>260</left>
+						<top>-80</top>
+						<width>74</width>
+						<height>74</height>
+						<texture>pumpkin_3.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="8000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>390</left>
+						<top>-110</top>
+						<width>18</width>
+						<height>18</height>
+						<texture>pumpkin_2.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="12000" delay="3500" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="30,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<left>1400</left>
+					<!-- Use this to space all the groups -->
+					<animation effect="rotate" end="22" time="9000" delay="400" pulse="true" condition="true">Conditional</animation>
+					<control type="image">
+						<left>40</left>
+						<top>-180</top>
+						<width>15</width>
+						<height>15</height>
+						<texture>pumpkin_3.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-50,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>100</left>
+						<top>-100</top>
+						<width>88</width>
+						<height>88</height>
+						<texture>pumpkin_2.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="8000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-30,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>200</left>
+						<top>-40</top>
+						<width>25</width>
+						<height>25</height>
+						<texture>pumpkin_3.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="60,0" end="-20,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>260</left>
+						<top>-80</top>
+						<width>25</width>
+						<height>25</height>
+						<texture>pumpkin_1.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="15000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="50,0" end="-40,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>390</left>
+						<top>-210</top>
+						<width>17</width>
+						<height>17</height>
+						<texture>pumpkin_2.png</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<animation effect="slide" start="0,0" end="0,1800" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+						<animation effect="slide" start="30,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					</control>
+				</control>
+		<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		</control>
+	</include>			
+	<include name="Lights Halloween">		
+		<control type="image">
+				<left>0</left>
+				<top>-360</top>
+				<width></width>
+				<height>780</height>
+				<texture>lights_halloween.png</texture>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Halloween) + [[!Player.Playing | !Window.IsVisible(FullScreenVideo)] | Window.IsVisible(DialogSeekBar.xml)]</visible>	
+		</control>	
+	</include>		
+	<include name="Hat Halloween">		
+		<control type="image">	
+			<top>-10</top>
+			<left>50</left>		
+			<aspectratio>keep</aspectratio>
+			<width>66</width>
+			<height>66</height>
+			<texture>hat_halloween.png</texture>
+			<visible>Skin.HasSetting(Halloween)+ Skin.HasSetting(HolidayThemes) + Window.IsVisible(Home) + [!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(PVRGuideInfo) + !Window.IsActive(PVRRecordingInfo) + !Window.IsActive(PictureInfo) + !Window.IsActive(AddonInformation)]</visible>
+		<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		</control>
+	</include>		
+	<include name="Tree Halloween">		
+		<control type="image">
+				<left>-1100</left>
+				<top>530</top>
+				<width></width>
+				<height>550</height>
+				<texture>tree_halloween.png</texture>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+		<visible>Skin.HasSetting(EnableCharacter) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Halloween) + Window.IsVisible(Home) + [!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(PVRGuideInfo) + !Window.IsActive(PVRRecordingInfo) + !Window.IsActive(PictureInfo) + !Window.IsActive(AddonInformation)]</visible>	
+		<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		</control>	
+	</include>		
+	<include name="Character Halloween">		
+		<control type="image">
+				<left>-1600</left>
+				<top>830</top>
+				<width></width>
+				<height>250</height>
+				<texture>reaper.png</texture>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+		<visible>Skin.HasSetting(EnableCharacter) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Halloween) + Window.IsVisible(Home) + [!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(PVRGuideInfo) + !Window.IsActive(PVRRecordingInfo) + !Window.IsActive(PictureInfo) + !Window.IsActive(AddonInformation)]</visible>	
+		<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		</control>	
+	</include>
+</includes>
