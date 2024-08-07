@@ -4,6 +4,3 @@
 [submodule "skin.estuary.modv2"]
 	path = skin.estuary.modv2
 	url = https://github.com/bower9065/skin.estuary.modv2
-[submodule "script.estuary.modv2_theme_selector"]
-	path = script.estuary.modv2_theme_selector
-	url = https://github.com/bower9065/script.estuary.modv2_theme_selector
