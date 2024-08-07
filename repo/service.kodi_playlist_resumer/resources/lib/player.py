@@ -292,7 +292,7 @@ class KodiPlayer(xbmc.Player):
                 if shuffled == "True":
                     xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Player.SetShuffle","params":{"playerid":1,"shuffle":true},"id":"player_shuffle"}') 
                 str_timestamp = '%d:%02d' % (resume_point / 60, resume_point % 60)
-                log(f'Will resume playback at {str_timestamp} of {full_path}')
+                log(f'Will resume playback at {str_timestamp} of playlist')
 
             # wait up to 10 secs for the video to start playing before we try to seek
             for i in range(0, 1000):
