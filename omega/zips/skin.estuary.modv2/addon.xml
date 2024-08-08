@@ -32,12 +32,25 @@
     	</menu>
  	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Estuary MOD V2 skin by Guilouz, adapted for Omega by PvD</summary>
-		<description lang="en_GB">Estuary MOD V2 is a mod from Estuary by Guilouz for Kodi 18 and adapted for Kodi 21 (Omega) by PvD from Kodinerds Community. It attempts to be easy for first time Kodi users to understand and use.</description>
+		<summary lang="en_GB">Modded version of Estuary Mod V2</summary>
+		<description lang="en_GB">
+- Added holiday and seasonal themes (American)
+	- Trees and characters can be toggled in skin settings
+	- String lights and garlands can be toggled in skin settings
+	- Snow effect can be toggled in skin settings
+	- Use [script.estuary.modv2_theme_selector](https://github.com/bower9065/script.estuary.modv2_theme_selector) to change theme settings from Home Assistant
+- Fixed play trailers in fullscreen mode
+- Playing trailers shows small OSD (no artwork to show anyways)
+- Removed play from resume point button from video info (Kodi asks anyways)
+- Added OSD shows for 5 seconds at start of audio and video playback (removed in Kodi since Nexus)
+	- (future) Make adjustable
+- Added adjustable video and fanart opacity to backgrounds
+- Other minor bug fixes		
+		</description>
 		<disclaimer lang="en_GB">For better experience, be sure to install all addons required by the skin.</disclaimer>
 		<platform>all</platform>
 		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
-		<source>https://github.com/b-jesch/skin.estuary.modv2/tree/Omega</source>
+		<source>https://github.com/bower9065/skin.estuary.modv2/tree/main</source>
 			<assets>
 				<icon>resources/icon.png</icon>
 				<fanart>resources/fanart.jpg</fanart>
@@ -49,8 +62,6 @@
 				<screenshot>resources/screenshots/screenshot_9.png</screenshot>
 				<screenshot>resources/screenshots/screenshot_10.png</screenshot>
 				<screenshot>resources/screenshots/screenshot_13.png</screenshot>
-				<screenshot>resources/screenshots/screenshot_14.png</screenshot>
-				<screenshot>resources/screenshots/screenshot_15.png</screenshot>
 			</assets>
 	</extension>
 </addon>
