@@ -8,27 +8,8 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<language />
-		<summary lang="en">Send JSON-RPC commands to Kodi addon</summary>
-		<description lang="en">Change theme settings for Bower9065's mod of Estuary Mod V2 from Home Assistant using Kodi integration.
-Accepted commands: 
-  'Valentines Day', 'St Patricks Day', 'Easter', '4th of July',
-  'Halloween', 'Thanksgiving', 'Chrtistmas', 'New Years Eve', 
-  'Spring', 'Summer', 'Autumn', 'Winter', 'Holiday Themes on/off', 
-  'String Lights on/off', 'Snow Effect on/off' and 'Character on/off'. 
-Example call-service:
-  alias: Kodi Themes - Thanksgiving
-  service: kodi.call_method
-  target:
-	entity_id:
-	  - media_player.kodi_pc
-	  - media_player.kodi_bedroom
-	  - media_player.kodi_living_room
-	  data:
-		method: Addons.ExecuteAddon
-		addonid: script.estuary.modv2_theme_selector
-		params:
-		  command: Thanksgiving
-		</description>			
+		<summary lang="en">Change Bower9065's Estuary Mod V2 themes from Home Assistant</summary>
+		<description lang="en">Uses Kodi integration. See README.md for Home Assistant example service-call.</description>			
 		<platform>all</platform>
 		<website />
 		<source>https://github.com/bower9065/script.estuary.modv2_theme_selector/tree/main</source>
@@ -74,20 +55,7 @@ Example call-service:
  	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Modded version of Estuary Mod V2</summary>
-		<description lang="en_GB">
-- Added holiday and seasonal themes (American)
-	- Trees and characters can be toggled in skin settings
-	- String lights and garlands can be toggled in skin settings
-	- Snow effect can be toggled in skin settings
-	- Use [script.estuary.modv2_theme_selector](https://github.com/bower9065/script.estuary.modv2_theme_selector) to change theme settings from Home Assistant
-- Fixed play trailers in fullscreen mode
-- Playing trailers shows small OSD (no artwork to show anyways)
-- Removed play from resume point button from video info (Kodi asks anyways)
-- Added OSD shows for 5 seconds at start of audio and video playback (removed in Kodi since Nexus)
-	- (future) Make adjustable
-- Added adjustable video and fanart opacity to backgrounds
-- Other minor bug fixes		
-		</description>
+		<description lang="en_GB">Added holiday and seasonal themes and other fixes.</description>
 		<disclaimer lang="en_GB">For better experience, be sure to install all addons required by the skin.</disclaimer>
 		<platform>all</platform>
 		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
