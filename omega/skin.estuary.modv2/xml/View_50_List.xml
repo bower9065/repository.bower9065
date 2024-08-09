@@ -450,22 +450,12 @@
 					<left>30</left>
 					<top>140</top>
 					<width>535</width>
-					<height>330</height>
+					<height>470</height>
 					<aspectratio aligny="center">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<texture background="true" fallback="DefaultFile.png">$VAR[IconWallPosterVar]</texture>
 					<visible>Container.Content(files) + !String.IsEqual(ListItem.DbType,episode)</visible>
 				</control>				
-				<control type="image">
-					<left>30</left>
-					<top>140</top>
-					<width>535</width>
-					<height>470</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<fadetime>300</fadetime>
-					<texture background="true" fallback="DefaultFile.png">$VAR[IconWallThumbVar]</texture>
-					<visible>Container.Content(files)</visible>
-				</control>
 				<control type="image">
 					<left>30</left>
 					<top>140</top>
@@ -501,17 +491,6 @@
 						<top>620</top>
 						<width>535</width>
 						<bottom>130</bottom>
-						<align>justify</align>
-						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$VAR[ListBoxInfoVar]</label>
-						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(listitem.dbtype,artist) + !String.IsEqual(listitem.dbtype,song) + !Container.Content(favourites)</visible>
-						<textcolor>$VAR[SkinColorVar]</textcolor>
-						<visible>!Container.Content(genres)</visible>
-					</control>
-					<control type="textbox" id="15500">
-						<top>640</top>
-						<width>535</width>
-						<bottom>112</bottom>
 						<align>justify</align>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
