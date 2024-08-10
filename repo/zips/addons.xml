@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="service.kodi_playlist_resumer" name="Kodi Playlist Resumer" version="1.0.1" provider-name="Bower9065">
+<addons><addon id="service.kodi_playlist_resumer" name="Kodi Playlist Resumer" version="1.0.2" provider-name="Bower9065">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
