@@ -7,3 +7,6 @@
 [submodule "service.kodi_playlist_resumer"]
 	path = service.kodi_playlist_resumer
 	url = https://github.com/bower9065/service.kodi_playlist_resumer
+[submodule "script.playrandomvideos"]
+	path = script.playrandomvideos
+	url = https://github.com/bower9065/script.playrandomvideos
