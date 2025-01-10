@@ -1,5 +1,5 @@
-<?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.playrandomvideos" name="Play Random Videos" version="2.1.5" provider-name="Bower9065">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.playrandomvideos" name="Play Random Videos" version="2.1.5" provider-name="Bower9065">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 	</requires>
@@ -36,24 +36,4 @@ v2.0.0 (2021-01-29)
 			<icon>icon.png</icon>
 		</assets>
 	</extension>
-</addon><addon id="service.kodi_playlist_resumer" name="Kodi Playlist Resumer" version="1.0.9" provider-name="Bower9065">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Playlist or filepath restorer.</summary>
-    <description lang="en_GB">Periodically sets the resume point of file or entire playlist (if video is in Kodi library) and can automatically resume on Kodi start.</description>
-    <platform>all</platform>
-	  <license>GPL-3.0-only</license>
-    <website />
-    <source>https://github.com/bower9065/service.kodi_playlist_resumer/tree/main</source>
-    <forum />
-    <email />
-	<assets>
-		<icon>resources/icon.png</icon>
-		<fanart>resources/fanart.jpg</fanart>
-		<screenshot />
-	</assets>
-  </extension>
-</addon></addons>
+</addon>
