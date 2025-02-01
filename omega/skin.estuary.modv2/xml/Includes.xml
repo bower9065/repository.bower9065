@@ -3788,8 +3788,8 @@
 					<left>0</left>
 					<height>550</height>
 					<width>100%</width>
-					<bottom>-245</bottom>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<bottom>-245</bottom>		
+					<texture colordiffuse="$VAR[SeekBarOpacityVar]">dialogs/dialog-bg-nobo.png</texture>
 					<fadetime>100</fadetime>
 				</control>
 				<control type="image">
@@ -4308,8 +4308,8 @@
 					<left>0</left>
 					<bottom>-440</bottom>
 					<width>100%</width>
-					<height>590</height>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<height>590</height>	
+					<texture colordiffuse="$VAR[SeekBarOpacityVar]">dialogs/dialog-bg-nobo.png</texture>	
 				</control>
 				<control type="image">
 					<right>30</right>

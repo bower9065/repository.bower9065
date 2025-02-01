@@ -1278,7 +1278,7 @@
 		<value>$LOCALIZE[31334]</value>
 	</variable>
 	<variable name="SeekBarOpacityVar">
-		<value condition="Skin.HasSetting(SeekbarOpacity)">3FFFFFFF</value>
+		<value condition="Skin.HasSetting(SeekbarOpacity)">80FFFFFF</value>
 		<value>FFFFFFFF</value>
 	</variable>
 	<variable name="WidgetActionVar">
