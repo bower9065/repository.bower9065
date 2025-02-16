@@ -1,84 +1,86 @@
-# Estuary MOD V2 Theme Selector
+**Estuary MOD V2 Theme Selector**
 
 Change theme settings for Bower9065's mod of Estuary Mod V2 from Home Assistant using Kodi integration.
-Toggle theme, string lights, characters and snow effect.
-Accepted holiday commands:
-    'ValentinesDay' 
+Toggle themes, string lights, characters and snow effect.
+
+Accepted  holiday commands:
+
+    'ValentinesDay'
     'StPatricksDay'
-    'Easter',
-	'4thofJuly'
+    'Easter', 
+    '4thofJuly'
 	'Halloween'
 	'Thanksgiving'
 	'Chrtistmas'
-	'NewYearsEve'
+	'NewYearsEve
 	'Spring'
 	'Summer'
 	'Autumn'
 	'Winter'
 
 Example call-service:
-
 Change theme
-	alias: Kodi Themes - Valentines Day
-	target:
-	  entity_id:
-		- media_player.kodi_pc
-	data:
-	  method: Addons.ExecuteAddon
-	  addonid: script.estuary.modv2_theme_selector
-	  params:
-		type: Holiday
-		command: ValentinesDay
-	action: kodi.call_method
 
-Turn snow effect on
-	alias: Kodi Themes - Valentines Day
+	alias: Kodi Themes - 4th of July
 	target:
 	  entity_id:
-		- media_player.kodi_pc
+	    - media_player.kodi_pc
 	data:
 	  method: Addons.ExecuteAddon
 	  addonid: script.estuary.modv2_theme_selector
 	  params:
-		type: Snow_Effect_on
-		command: "true"
+	    type: Holiday
+	    command: 4thOfJuly
 	action: kodi.call_method
+Turn off "Themes"
 
-Turn string lights off
-	alias: Kodi Themes - Valentines Day
+	alias: Kodi Themes - Turn off Themes
 	target:
 	  entity_id:
-		- media_player.kodi_pc
+	    - media_player.kodi_pc
 	data:
 	  method: Addons.ExecuteAddon
 	  addonid: script.estuary.modv2_theme_selector
 	  params:
-		type: String_Lights_on
-		command: "false"
+	    type: Themes_on
+	    command: "false"
 	action: kodi.call_method
-	
-Turn themes on
-	alias: Kodi Themes - Valentines Day
+Turn on "String Lights"
+
+	alias: Kodi Themes - Turn on String Lights
 	target:
 	  entity_id:
-		- media_player.kodi_pc
+	    - media_player.kodi_pc
 	data:
 	  method: Addons.ExecuteAddon
 	  addonid: script.estuary.modv2_theme_selector
 	  params:
-		type: Themes_on
-		command: "true"
+	    type: String_Lights_on
+	    command: "true"
 	action: kodi.call_method
-	
-Turn characters and trees off
-	alias: Kodi Themes - Valentines Day
+Turn off "Characters"
+
+	alias: Kodi Themes - Turn off characters
 	target:
 	  entity_id:
-		- media_player.kodi_pc
+	    - media_player.kodi_pc
 	data:
 	  method: Addons.ExecuteAddon
 	  addonid: script.estuary.modv2_theme_selector
 	  params:
-		type: Character_on
-		command: "false"
+	    type: Character_on
+	    command: "false"
+	action: kodi.call_method
+Turn on "Snow Effect"
+
+	alias: Kodi Themes - Turn on Snow Effect
+	target:
+	  entity_id:
+	    - media_player.kodi_pc
+	data:
+	  method: Addons.ExecuteAddon
+	  addonid: script.estuary.modv2_theme_selector
+	  params:
+	    type: Snow_Effect_on
+	    command: "true"
 	action: kodi.call_method
