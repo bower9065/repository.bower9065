@@ -888,7 +888,7 @@
 					<param name="setting">GradientColor</param>
 				</include>
 				<include content="DefaultColorSettingButton">
-					<param name="enable">!$EXP[ChristmasTheme] + !$EXP[HalloweenTheme] + !$EXP[PreEasterTheme] + !$EXP[EasterTheme] + !$EXP[ValentineTheme]</param>
+					<param name="enable">!Skin.HasSetting(HolidayThemes)</param>
 					<param name="id">801</param>
 					<param name="label">$LOCALIZE[31233]</param>
 					<param name="label2">$VAR[Label_SkinSetting_BackgroundColor]</param>
@@ -1689,6 +1689,13 @@
 					<onclick>Skin.ToggleSetting(EnableCharacter)</onclick>
 					<selected>Skin.HasSetting(EnableCharacter)</selected>
 					<enable>Skin.HasSetting(HolidayThemes)</enable>
+				</control>
+				<control type="radiobutton" id="11006">
+					<label>  ∟$LOCALIZE[320023]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(EnableAutoSwitch)</onclick>
+					<selected>Skin.HasSetting(EnableAutoSwitch)</selected>
+					<enable>Skin.HasSetting(HolidayThemes) + System.HasAddon(script.estuary.modv2_theme_selector)</enable>
 				</control>					
 			</control>			
 			<control type="image">

@@ -1,9 +1,14 @@
 import xbmc
+from datetime import datetime, time
 
 # view switcher
 
 content_ids = list(['50', '55', '53', '54', '505', '500', '502', '503', '504', '506', '507', '508', '509', '510'])
 forced_views = list(['movies', 'sets', 'setmovies', 'tvshows', 'seasons', 'episodes', 'albums', 'artists', 'musicvideos'])
+
+# change theme if enabled
+if xbmc.getCondVisibility('Skin.HasSetting(EnableAutoSwitch)') and xbmc.getCondVisibility('Skin.HasSetting(HolidayThemes)') and xbmc.getCondVisibility('System.HasAddon(script.estuary.modv2_theme_selector)'):
+    xbmc.executebuiltin('RunAddon(script.estuary.modv2_theme_selector)')
 
 
 def get_view_id(content):
@@ -66,5 +71,11 @@ if __name__ == '__main__':
 
         if xbmc.getCondVisibility('Skin.HasSetting(ForcedViews.Enabled)'):
             content, mode = viewswitcher(content, mode)
-
+    # change theme at 12:00 if enabled
+        now = datetime.now()
+        current_time = str(now.strftime("%H:%M:%S"))
+        target_time = str(time(0, 0, 0))
+        xbmc.log('----current'f'{current_time} target'f'{target_time}', xbmc.LOGINFO)
+        if current_time == target_time and xbmc.getCondVisibility('Skin.HasSetting(EnableAutoSwitch)') and xbmc.getCondVisibility('Skin.HasSetting(HolidayThemes)') and xbmc.getCondVisibility('System.HasAddon(script.estuary.modv2_theme_selector)'):
+            xbmc.executebuiltin('RunAddon(script.estuary.modv2_theme_selector)')
     xbmc.log('Estuary MOD V2 Nexus service handler finished')

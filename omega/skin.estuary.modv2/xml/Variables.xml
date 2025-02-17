@@ -1016,39 +1016,61 @@
 		<value>$LOCALIZE[31401]</value>
 	</variable>
 	<variable name="Label_SkinSetting_RatingStringColor">
-		<value condition="$EXP[EasterTheme]">$LOCALIZE[31471]</value>
 		<value condition="!String.IsEmpty(Skin.String(RatingStringColor))">$INFO[Skin.String(RatingStringColor)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="Label_SkinSetting_UserRatingStringColor">
-		<value condition="$EXP[EasterTheme]">$LOCALIZE[31471]</value>
 		<value condition="!String.IsEmpty(Skin.String(UserRatingStringColor))">$INFO[Skin.String(UserRatingStringColor)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="Label_SkinSetting_SkinColor">
-		<value condition="$EXP[ChristmasTheme]">$LOCALIZE[31469]</value>
-		<value condition="$EXP[HalloweenTheme]">$LOCALIZE[31470]</value>
-		<value condition="$EXP[PreEasterTheme]">$LOCALIZE[31515]</value>
-		<value condition="$EXP[EasterTheme]">$LOCALIZE[31471]</value>
-		<value condition="$EXP[ValentineTheme]">$LOCALIZE[31472]</value>
+		<value condition="Skin.HasSetting(Christmas) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320004]</value>
+		<value condition="Skin.HasSetting(Thanksgiving) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320005]</value>
+		<value condition="Skin.HasSetting(Halloween) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320006]</value>
+		<value condition="Skin.HasSetting(Easter) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320007]</value>
+		<value condition="Skin.HasSetting(StPatricksDay) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320008]</value>
+		<value condition="Skin.HasSetting(ValentinesDay) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320009]</value>	
+		<value condition="Skin.HasSetting(Autumn) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320010]</value>
+		<value condition="Skin.HasSetting(Winter) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320011]</value>
+		<value condition="Skin.HasSetting(4thOfJuly) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320015]</value>
+		<value condition="Skin.HasSetting(NewYearsEve) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320016]</value>		
+		<value condition="Skin.HasSetting(Summer) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320017]</value>
+		<value condition="Skin.HasSetting(Spring) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320018]</value>
+		<value condition="Skin.HasSetting(Beach) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320022]</value>	
 		<value condition="!String.IsEmpty(Skin.String(SkinColor))">$INFO[Skin.String(SkinColor)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="Label_SkinSetting_GradientColor">
-		<value condition="$EXP[ChristmasTheme]">$LOCALIZE[31469]</value>
-		<value condition="$EXP[HalloweenTheme]">$LOCALIZE[31470]</value>
-		<value condition="$EXP[PreEasterTheme]">$LOCALIZE[31515]</value>
-		<value condition="$EXP[EasterTheme]">$LOCALIZE[31471]</value>
-		<value condition="$EXP[ValentineTheme]">$LOCALIZE[31472]</value>
+		<value condition="Skin.HasSetting(Christmas) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320004]</value>
+		<value condition="Skin.HasSetting(Thanksgiving) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320005]</value>
+		<value condition="Skin.HasSetting(Halloween) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320006]</value>
+		<value condition="Skin.HasSetting(Easter) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320007]</value>
+		<value condition="Skin.HasSetting(StPatricksDay) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320008]</value>
+		<value condition="Skin.HasSetting(ValentinesDay) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320009]</value>	
+		<value condition="Skin.HasSetting(Autumn) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320010]</value>
+		<value condition="Skin.HasSetting(Winter) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320011]</value>
+		<value condition="Skin.HasSetting(4thOfJuly) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320015]</value>
+		<value condition="Skin.HasSetting(NewYearsEve) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320016]</value>		
+		<value condition="Skin.HasSetting(Summer) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320017]</value>
+		<value condition="Skin.HasSetting(Spring) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320018]</value>
+		<value condition="Skin.HasSetting(Beach) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320022]</value>	
 		<value condition="!String.IsEmpty(Skin.String(GradientColor))">$INFO[Skin.String(GradientColor)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="Label_SkinSetting_BackgroundColor">
-		<value condition="$EXP[ChristmasTheme]">$LOCALIZE[31469]</value>
-		<value condition="$EXP[HalloweenTheme]">$LOCALIZE[31470]</value>
-		<value condition="$EXP[PreEasterTheme]">$LOCALIZE[31515]</value>
-		<value condition="$EXP[EasterTheme]">$LOCALIZE[31471]</value>
-		<value condition="$EXP[ValentineTheme]">$LOCALIZE[31472]</value>
+		<value condition="Skin.HasSetting(Christmas) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320004]</value>
+		<value condition="Skin.HasSetting(Thanksgiving) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320005]</value>
+		<value condition="Skin.HasSetting(Halloween) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320006]</value>
+		<value condition="Skin.HasSetting(Easter) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320007]</value>
+		<value condition="Skin.HasSetting(StPatricksDay) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320008]</value>
+		<value condition="Skin.HasSetting(ValentinesDay) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320009]</value>	
+		<value condition="Skin.HasSetting(Autumn) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320010]</value>
+		<value condition="Skin.HasSetting(Winter) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320011]</value>
+		<value condition="Skin.HasSetting(4thOfJuly) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320015]</value>
+		<value condition="Skin.HasSetting(NewYearsEve) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320016]</value>		
+		<value condition="Skin.HasSetting(Summer) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320017]</value>
+		<value condition="Skin.HasSetting(Spring) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320018]</value>
+		<value condition="Skin.HasSetting(Beach) + Skin.HasSetting(HolidayThemes)">$LOCALIZE[320022]</value>	
 		<value condition="!String.IsEmpty(Skin.String(BackgroundColor))">$INFO[Skin.String(BackgroundColor)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
@@ -1178,7 +1200,7 @@
 		<value condition="[Player.HasVideo + !Skin.HasSetting(background_showvideo)] + Skin.HasSetting(Beach) + Skin.HasSetting(HolidayThemes)">$VAR[Video_Background_Opacity]</value>
 		<value condition="[[!Player.HasVideo + !Skin.HasSetting(background_showvideo)] | [!Player.HasVideo + Skin.HasSetting(background_showvideo)] | [Player.HasVideo + Skin.HasSetting(background_showvideo)]] + Skin.HasSetting(Beach) + Skin.HasSetting(HolidayThemes)">FFFFFFFF</value>
 		<value condition="[Player.HasVideo + !Skin.HasSetting(background_showvideo)] + Skin.HasSetting(SkinDefault) + Skin.HasSetting(HolidayThemes)">$VAR[Video_Background_Opacity]</value>
-		<value condition="[[!Player.HasVideo + !Skin.HasSetting(background_showvideo)] | [!Player.HasVideo + Skin.HasSetting(background_showvideo)] | [Player.HasVideo + Skin.HasSetting(background_showvideo)]] + Skin.HasSetting(SkinDefault) + Skin.HasSetting(HolidayThemes)">FFFFFFFF</value>				
+		<value condition="[[!Player.HasVideo + !Skin.HasSetting(background_showvideo)] | [!Player.HasVideo + Skin.HasSetting(background_showvideo)] | [Player.HasVideo + Skin.HasSetting(background_showvideo)]] + Skin.HasSetting(SkinDefault) + Skin.HasSetting(HolidayThemes)">primary_background</value>				
 		<value condition="[Player.HasVideo + !Skin.HasSetting(background_showvideo)] + !String.IsEmpty(Skin.String(background_image))">$VAR[Video_Background_Opacity]</value>
 		<value condition="[[!Player.HasVideo + !Skin.HasSetting(background_showvideo)] | [!Player.HasVideo + Skin.HasSetting(background_showvideo)] | [Player.HasVideo + Skin.HasSetting(background_showvideo)]] + !String.IsEmpty(Skin.String(background_image))">FFFFFFFF</value>					
 		<value condition="[Player.HasVideo + !Skin.HasSetting(background_showvideo)]">$VAR[Video_Primary_Background_Opacity]</value>

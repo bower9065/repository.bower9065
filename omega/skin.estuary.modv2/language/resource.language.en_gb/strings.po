@@ -2912,3 +2912,7 @@ msgstr ""
 msgctxt "#320021"
 msgid "Background image"
 msgstr ""
+
+msgctxt "#320023"
+msgid "Change theme automatically"
+msgstr ""
