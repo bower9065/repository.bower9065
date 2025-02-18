@@ -75,7 +75,6 @@ if __name__ == '__main__':
         now = datetime.now()
         current_time = str(now.strftime("%H:%M:%S"))
         target_time = str(time(0, 0, 0))
-        xbmc.log('----current'f'{current_time} target'f'{target_time}', xbmc.LOGINFO)
         if current_time == target_time and xbmc.getCondVisibility('Skin.HasSetting(EnableAutoSwitch)') and xbmc.getCondVisibility('Skin.HasSetting(HolidayThemes)') and xbmc.getCondVisibility('System.HasAddon(script.estuary.modv2_theme_selector)'):
             xbmc.executebuiltin('RunAddon(script.estuary.modv2_theme_selector)')
     xbmc.log('Estuary MOD V2 Nexus service handler finished')
