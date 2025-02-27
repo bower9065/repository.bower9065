@@ -2,7 +2,7 @@
 <includes>
 	<include name="Snow New Years Eve">
 		<control type="group">
-		<visible>Skin.HasSetting(EnableSnowEffect) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(NewYearsEve) + !Window.IsVisible(FullScreenVideo) + !Window.IsActive(visualisation)</visible>
+		<visible>Skin.HasSetting(EnableSnowEffect) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(NewYearsEve) + !Window.IsActive(visualisation)</visible>
 			<control type="group">
 					<left>-100</left>
 					<!-- Use this to space all the groups -->
@@ -261,7 +261,7 @@
 				<height>360</height>
 				<texture>lights_new_years_eve.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
-		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(NewYearsEve) + [[!Player.Playing | !Window.IsVisible(FullScreenVideo)] | Window.IsVisible(DialogSeekBar.xml)]</visible>
+		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(NewYearsEve) + [!Player.Playing | Window.IsVisible(DialogSeekBar.xml)]</visible>
 		</control>
 	</include>		
 	<include name="Tree New Years Eve">		

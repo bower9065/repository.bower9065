@@ -18,7 +18,7 @@
 				<height>500</height>
 				<texture>lights_beach.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
-		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Beach) + [[!Player.Playing | !Window.IsVisible(FullScreenVideo)] | Window.IsVisible(DialogSeekBar.xml)]</visible>
+		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Beach) + [!Player.Playing | Window.IsVisible(DialogSeekBar.xml)]</visible>
 		</control>
 	</include>		
 	<include name="Tree Beach">		

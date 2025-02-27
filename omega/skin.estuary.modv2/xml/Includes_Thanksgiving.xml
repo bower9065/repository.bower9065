@@ -2,7 +2,7 @@
 <includes>
 	<include name="Snow Thanksgiving">
 		<control type="group">
-		<visible>Skin.HasSetting(EnableSnowEffect) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Thanksgiving) + !Window.IsVisible(FullScreenVideo) + !Window.IsActive(visualisation)</visible>
+		<visible>Skin.HasSetting(EnableSnowEffect) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Thanksgiving) + !Window.IsActive(visualisation)</visible>
 			<control type="group">
 					<left>-100</left>
 					<!-- Use this to space all the groups -->
@@ -261,7 +261,7 @@
 				<height>390</height>
 				<texture>lights_thanksgiving.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
-		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Thanksgiving) + [[!Player.Playing | !Window.IsVisible(FullScreenVideo)] | Window.IsVisible(DialogSeekBar.xml)]</visible>
+		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Thanksgiving) + [!Player.Playing | Window.IsVisible(DialogSeekBar.xml)]</visible>
 		</control>
 	</include>		
 	<include name="Tree Thanksgiving">		

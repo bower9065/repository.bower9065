@@ -21,7 +21,7 @@
 			<screenshot />
 		</assets>		
 	</extension>
-</addon><addon id="skin.estuary.modv2" version="1.0.61" name="Estuary MOD V2" provider-name="Bower9065">
+</addon><addon id="skin.estuary.modv2" version="1.0.62" name="Estuary MOD V2" provider-name="Bower9065">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1" />
 		<import addon="xbmc.gui" version="5.17.0" />

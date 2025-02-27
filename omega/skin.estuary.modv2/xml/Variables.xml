@@ -1212,6 +1212,7 @@
 	</variable>
 	<variable name="ShadowColorVar">
 		<value condition="!String.IsEmpty(Skin.String(ShadowColor))">$INFO[Skin.String(ShadowColor)]</value>
+		<value condition="Skin.HasSetting(HolidayThemes)">FF000000</value>
 		<value>text_shadow</value>
 	</variable>
 	<variable name="Background_Opacity">

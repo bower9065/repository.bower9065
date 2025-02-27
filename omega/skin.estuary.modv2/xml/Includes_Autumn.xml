@@ -2,7 +2,7 @@
 <includes>
 	<include name="Snow Autumn">
 		<control type="group">
-		<visible>Skin.HasSetting(EnableSnowEffect) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Autumn) + !Window.IsVisible(FullScreenVideo) + !Window.IsActive(visualisation)</visible>
+		<visible>Skin.HasSetting(EnableSnowEffect) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Autumn) + !Window.IsActive(visualisation)</visible>
 			<control type="group">
 					<left>-100</left>
 					<!-- Use this to space all the groups -->
@@ -261,7 +261,7 @@
 				<height>520</height>
 				<texture>lights_autumn.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
-		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Autumn) + [[!Player.Playing | !Window.IsVisible(FullScreenVideo)] | Window.IsVisible(DialogSeekBar.xml)]</visible>
+		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Autumn) + [!Player.Playing | Window.IsVisible(DialogSeekBar.xml)]</visible>
 		<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 		</control>	

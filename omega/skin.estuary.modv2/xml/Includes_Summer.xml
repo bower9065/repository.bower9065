@@ -18,7 +18,7 @@
 				<height>300</height>
 				<texture>lights_summer.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
-		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Summer) + [[!Player.Playing | !Window.IsVisible(FullScreenVideo)] | Window.IsVisible(DialogSeekBar.xml)]</visible>
+		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Summer) + [!Player.Playing | Window.IsVisible(DialogSeekBar.xml)]</visible>
 		</control>
 	</include>		
 	<include name="Tree Summer">		

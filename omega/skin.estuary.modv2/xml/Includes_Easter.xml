@@ -2,7 +2,7 @@
 <includes>
 	<include name="Snow Easter">
 		<control type="group">
-		<visible>Skin.HasSetting(EnableSnowEffect) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Easter) + !Window.IsVisible(FullScreenVideo) + !Window.IsActive(visualisation)</visible>
+		<visible>Skin.HasSetting(EnableSnowEffect) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Easter) + !Window.IsActive(visualisation)</visible>
 				<control type="group">
 						<left>-100</left>
 						<!-- Use this to space all the groups -->
@@ -261,7 +261,7 @@
 				<height>400</height>
 				<texture>lights_easter.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
-		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Easter) + [[!Player.Playing | !Window.IsVisible(FullScreenVideo)] | Window.IsVisible(DialogSeekBar.xml)]</visible>
+		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Easter) + [!Player.Playing | Window.IsVisible(DialogSeekBar.xml)]</visible>
 		</control>
 	</include>		
 	<include name="Tree Easter">		
