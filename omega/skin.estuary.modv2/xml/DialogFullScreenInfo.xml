@@ -74,15 +74,6 @@
 					<include>OpenClose_Right</include>
 				</control>	
 			</control>
-			<control type="image" id="3334">
-				<right>50</right>
-				<top>485</top>
-				<width>284</width>
-				<height>110</height>
-				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<texture background="true" fallback="fallback.png">$VAR[PlayerInfoClearLogoVar]</texture>
-				<visible>![Player.HasVideo + String.IsEqual(Window(Home).Property(TrailerPlaying),439)] + !Skin.HasSetting(enable_LibraryClearLogo)</visible>
-			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<left>384</left>
@@ -181,7 +172,6 @@
 						<param name="visible" value="!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled" />
 					</include>
 				</control>
-
 				<control type="grouplist">
 					<orientation>horizontal</orientation>
 					<left>10</left>
@@ -300,6 +290,13 @@
 						<param name="label" value="$INFO[VideoPlayer.UserRating]" />
 						<param name="visible" value="!String.IsEmpty(VideoPlayer.UserRating)" />
 					</include>
+					<include content="MediaFlag">
+						<param name="texture" value="$VAR[PlayerMPAAImageVar]" />
+						<param name="fallback" value="flags/audiochannel/fallback.png" />
+						<param name="width" value="104" />
+						<param name="label" value="$VAR[PlayerMPAAFlagVar]" />
+						<param name="visible" value="!String.IsEmpty(VideoPlayer.mpaa)<" />
+					</include>						
 				</control>
 				<control type="grouplist">
 					<orientation>horizontal</orientation>
@@ -414,12 +411,116 @@
 					<param name="list_id" value="50"/>
 					<param name="content_path" value="$VAR[OSDCastVar]"/>
 					<param name="widget_target" value="videos"/>
+					<param name="alt_focus" value="9004"/>
+					<param name="onfocus" value="SetFocus(9004)"/>
 				</include>
 				<include content="WidgetListThumbInfo">
 					<param name="content_path" value="$VAR[VideoInfoPlayerFanartVar]"/>
 					<param name="list_id" value="63000"/>
 					<param name="onclick" value="SetFocus(9001)"/>
 				</include>
+			</control>
+			<control type="button" id="9004">
+				<visible>Control.IsVisible(50)</visible>
+				<visible allowhiddenfocus="true">false</visible>
+				<width>1</width>
+				<height>1</height>
+				<texturefocus />
+				<texturenofocus />
+				<onup>5000</onup>
+				<ondown condition="!Control.IsVisible(5500) + !Control.IsVisible(5600) + !Control.IsVisible(5700) + !Control.IsVisible(5800) + !Control.IsVisible(5900) + !Control.IsVisible(6000) + !Control.IsVisible(63000)">SetFocus(5002)</ondown>
+				<ondown condition="Control.IsVisible(63000)">SetFocus(63000)</ondown>
+				<ondown condition="Control.IsVisible(6000)">SetFocus(6000)</ondown>
+				<ondown condition="Control.IsVisible(5900)">SetFocus(5900)</ondown>
+				<ondown condition="Control.IsVisible(5800)">SetFocus(5800)</ondown>
+				<ondown condition="Control.IsVisible(5700)">SetFocus(5700)</ondown>
+				<ondown condition="Control.IsVisible(5600)">SetFocus(5600)</ondown>
+				<ondown condition="Control.IsVisible(5500)">SetFocus(5500)</ondown>
+				<onleft>SetFocus(50)</onleft>
+				<onleft>Left</onleft>
+				<onleft>SetFocus(9004)</onleft>
+				<onright>SetFocus(50)</onright>
+				<onright>Right</onright>
+				<onright>SetFocus(9004)</onright>
+				<onclick>SetFocus(9006)</onclick>
+			</control>
+			<control type="group">
+				<visible>ControlGroup(9005).HasFocus()</visible>
+				<animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">WindowOpen</animation>
+				<animation effect="fade" end="0" start="100" time="150">Hidden</animation>
+				<animation effect="fade" end="0" start="100" time="150">WindowClose</animation>
+				<control type="group">
+					<centerleft>50%</centerleft>
+					<height>290</height>
+					<centertop>50%</centertop>
+					<width>650</width>
+					<include content="DialogBackgroundCommons">
+						<param name="width" value="650" />
+						<param name="height" value="80" />
+						<param name="header_label" value="$INFO[Container(50).ListItem.Label]" />
+						<param name="header_id" value="1" />
+					</include>
+					<control type="group">
+						<left>0</left>
+						<top>80</top>
+						<control type="grouplist" id="9005">
+							<width>650</width>
+							<height>210</height>
+							<itemgap>0</itemgap>
+							<control type="button" id="9006">
+								<width>650</width>
+								<textoffsetx>40</textoffsetx>
+								<top>0</top>
+								<height>70</height>
+								<aligny>center</aligny>
+								<align>center</align>
+								<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+								<texturenofocus colordiffuse="dialog_tint">colors/white.png</texturenofocus>
+								<label>$LOCALIZE[31113]</label>
+								<onleft>SetFocus(9004)</onleft>
+								<onright>SetFocus(9004)</onright>
+								<onback>9004</onback>
+								<onclick>SetFocus(50)</onclick>
+								<onclick>SetProperty(ActorLabel,$INFO[Container(50).ListItem.Label],home)</onclick>
+								<onclick>ActivateWindow(1144)</onclick>
+								<onclick>SetFocus(9004)</onclick>
+							</control>
+							<control type="button" id="9007">
+								<width>650</width>
+								<textoffsetx>40</textoffsetx>
+								<top>0</top>
+								<height>70</height>
+								<aligny>center</aligny>
+								<align>center</align>
+								<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+								<texturenofocus colordiffuse="dialog_tint">colors/white.png</texturenofocus>
+								<label>$LOCALIZE[31488]</label>
+								<onleft>SetFocus(9004)</onleft>
+								<onright>SetFocus(9004)</onright>
+								<onback>9004</onback>
+								<onclick>Dialog.Close(MovieInformation)</onclick>
+								<onclick condition="!System.HasAddon(script.embuary.info)">InstallAddon(script.embuary.info)</onclick>
+								<onclick>RunScript(script.embuary.info,call=person,query=$INFO[Container(50).ListItem.Label])</onclick>
+							</control>
+							<control type="button" id="9008">
+								<width>650</width>
+								<textoffsetx>40</textoffsetx>
+								<top>0</top>
+								<height>70</height>
+								<aligny>center</aligny>
+								<align>center</align>
+								<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+								<texturenofocus colordiffuse="dialog_tint">colors/white.png</texturenofocus>
+								<label>$LOCALIZE[15067]</label>
+								<onleft>SetFocus(9004)</onleft>
+								<onright>SetFocus(9004)</onright>
+								<onback>9004</onback>
+								<onclick>SetFocus(9004)</onclick>
+							</control>
+						</control>
+					</control>
+				</control>
 			</control>
 			<control type="group">
 				<top>640</top>

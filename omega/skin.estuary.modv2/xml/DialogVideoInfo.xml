@@ -8,6 +8,9 @@
 	<onload condition="Skin.HasSetting(tomatometeravgaudience) + !String.IsEmpty(ListItem.Rating(tomatometeravgaudience))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(tomatometeravgaudience)],10,rotten)</onload>
 	<onload condition="!String.IsEmpty(ListItem.Rating(metacritic))">RunScript(skin.estuary.modv2,calculate,mul,$INFO[ListItem.Rating(metacritic)],10,metacritic)</onload>
 	<onload condition="!String.StartsWith(ListItem.FileNameAndPath,'plugin://') + [String.IsEmpty(ListItem.Size) | String.StartsWith(ListItem.Size,0.00)]">RunScript(skin.estuary.modv2,getFileSize,$ESCINFO[ListItem.FileNameAndPath])</onload>
+	<onload>Dialog.Close(1144,true)</onload>
+	<onload>Dialog.Close(1122,true)</onload>
+	<onload>Dialog.Close(videoosd,true)</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<onunload>ClearProperty(rotten,home)</onunload>
 	<onunload>ClearProperty(metacritic,home)</onunload>
@@ -241,13 +244,13 @@
 						<param name="id" value="14" />
 						<param name="icon" value="icons/infodialogs/versions.png" />
 						<param name="label" value="$LOCALIZE[40000]" />
-						<param name="visible" value="String.IsEqual(ListItem.DBType,movie)" />
+						<param name="visible" value="ListItem.HasVideoVersions" />
 					</include>
 					<include content="InfoDialogSmallButton">
 						<param name="id" value="15" />
 						<param name="icon" value="icons/infodialogs/extras.png" />
 						<param name="label" value="$LOCALIZE[40211]" />
-						<param name="visible" value="String.IsEqual(ListItem.DBType,movie)" />
+						<param name="visible" value="ListItem.HasVideoVersions" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="!String.IsEmpty(ListItem.Set)">
 						<param name="id" value="444" />
@@ -894,8 +897,10 @@
 							<onleft>SetFocus(9004)</onleft>
 							<onright>SetFocus(9004)</onright>
 							<onback>9004</onback>
+							<onclick>Dialog.Close(1144,true)</onclick>
 							<onclick>SetFocus(50)</onclick>
-							<onclick>Select</onclick>
+							<onclick>SetProperty(ActorLabel,$INFO[Container(50).ListItem.Label],home)</onclick>
+							<onclick>ActivateWindow(1144)</onclick>
 							<onclick>SetFocus(9004)</onclick>
 						</control>
 						<control type="button" id="9007">

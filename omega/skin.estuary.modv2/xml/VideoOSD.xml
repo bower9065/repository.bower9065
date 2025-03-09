@@ -2,6 +2,9 @@
 <window>
 	<onload condition="!Player.PauseEnabled | String.IsEqual(Skin.String(defaultosdbutton),36044)">SetFocus(603)</onload>
 	<onload condition="Player.Rewinding | Player.Forwarding">SetFocus(6021)</onload>
+	<onload condition="Player.Rewinding | Player.Forwarding">SetFocus(6021)</onload>
+	<onload condition="Skin.HasSetting(ShowSeekBar) + !Skin.HasSetting(SmallOSDVideo)">Dialog.Close(seekbar,true)</onload>
+	<onunload condition="Skin.HasSetting(ShowSeekBar) + !Skin.HasSetting(SmallOSDVideo)">Dialog.Close(seekbar,true)</onunload>
 	<defaultcontrol always="true">602</defaultcontrol>
 	<include>Animation_BottomSlide</include>
 	<depth>DepthOSD</depth>
@@ -44,7 +47,7 @@
 				<itemgap>2</itemgap>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>horizontal</orientation>
-				<onup>87</onup>
+				<onup>ActivateWindow(1122)</onup>
 				<ondown>Action(close)</ondown>
 				<onleft>200</onleft>
 				<onright>200</onright>

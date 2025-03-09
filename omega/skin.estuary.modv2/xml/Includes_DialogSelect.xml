@@ -206,6 +206,7 @@
 						<right>14</right>
 						<height>35</height>
 						<label>$INFO[ListItem.Label] $INFO[ListItem.VideoVersionName,(,)]</label>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<font>font12_bold</font>
 						<scroll>true</scroll>
 						<visible>String.IsEmpty(ListItem.Label2)</visible>
@@ -217,6 +218,7 @@
 						<height>35</height>
 						<font>font12_bold</font>
 						<label>$INFO[ListItem.Label] $INFO[ListItem.VideoVersionName,(,)]</label>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<scroll>true</scroll>
 						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					</control>

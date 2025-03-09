@@ -10,9 +10,24 @@
 	<onload>SetProperty(onback_10057,SetFocus(100))</onload>
 	<onload>SetProperty(onback_10058,SetFocus(100))</onload>
 	<onload>SetProperty(onback_10059,SetFocus(100))</onload>
+	<onload>Dialog.Close(1122,true)</onload>
+	<onload>Dialog.Close(videoosd,true)</onload>
 	<onload condition="!Skin.HasSetting(disable_PauseOnExtraInfos)">PlayerControl(Play)</onload>
 	<onunload condition="!Skin.HasSetting(disable_PauseOnExtraInfos)">PlayerControl(Play)</onunload>
 	<controls>
+		<include>Lights Valentines Day</include>
+		<include>Lights St Patricks Day</include>
+		<include>Lights Easter</include>
+		<include>Lights 4th of July</include>								
+		<include>Lights Halloween</include>
+		<include>Lights Thanksgiving</include>	
+		<include>Lights Christmas</include>	
+		<include>Lights New Years Eve</include>	
+		<include>Lights Spring</include>	
+		<include>Lights Summer</include>		
+		<include>Lights Autumn</include>
+		<include>Lights Winter</include>
+		<include>Lights Beach</include>	
 		<!-- Storage container for the item details -->
 		<control type="list" id="10051">
 			<top>-3000</top>

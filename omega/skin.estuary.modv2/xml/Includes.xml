@@ -2465,6 +2465,7 @@
 						<aligny>center</aligny>
 						<textoffsetx>-8</textoffsetx>
 						<label>$INFO[System.AlarmPos]</label>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>System.HasAlarm(shutdowntimer)</visible>
 					</control>
 					<control type="image">
@@ -2482,6 +2483,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[System.Date]</label>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(show_date)</visible>
 					</control>
 					<control type="label">
@@ -2489,6 +2491,7 @@
 						<width>auto</width>
 						<aligny>center</aligny>
 						<label>$INFO[Window(Weather).Property(Current.Temperature),| ,]$INFO[System.TemperatureUnits]</label>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(show_weatherinfo) + Skin.HasSetting(show_date) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="label">
@@ -2496,6 +2499,7 @@
 						<width>auto</width>
 						<aligny>center</aligny>
 						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(show_weatherinfo) + !Skin.HasSetting(show_date) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
@@ -2512,6 +2516,7 @@
 						<width>auto</width>
 						<aligny>center</aligny>
 						<label>| </label>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(show_inet) + !String.IsEmpty(System.InternetState)</visible>
 					</control>
 					<control type="image">
@@ -3989,6 +3994,7 @@
 						<height>38</height>
 						<label>[B][UPPERCASE]$LOCALIZE[31290][/UPPERCASE][/B]</label>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
@@ -4044,6 +4050,7 @@
 					<font>font37_bold</font>
 					<scroll>true</scroll>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Window.IsVisible(visualisation) + String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
 					<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 				</control>
@@ -4057,6 +4064,7 @@
 					<font>font37_bold</font>
 					<scroll>true</scroll>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<visible>Window.IsVisible(visualisation) + !String.IsEmpty(MusicPlayer.Offset(1).Title)</visible>
 					<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 					<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
@@ -4071,6 +4079,7 @@
 						<scroll>true</scroll>
 						<font>font37_bold</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<label>$VAR[OsdMainLabelVar]</label>
 						<animation effect="slide" end="0,-180" time="50" tween="sine" easing="out" condition="Window.IsVisible(1138) | [Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
 						<animation effect="slide" end="0,40" time="0" condition="!VideoPlayer.Content(LiveTV) + [[VideoPlayer.Content(files) + !String.StartsWith(Player.Filenameandpath,http)] | String.Contains(Player.Art(thumb),ytimg)] + !Window.IsVisible(1138) + ![Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]">Conditional</animation>
@@ -4084,6 +4093,7 @@
 						<scroll>true</scroll>
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<animation effect="slide" end="0,-45" time="50" tween="sine" easing="out" condition="PVR.IsTimeShift + !Player.ChannelPreviewActive">Conditional</animation>
 						<label>$VAR[OsdGenreLabelVar]</label>

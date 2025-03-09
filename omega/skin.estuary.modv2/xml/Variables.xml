@@ -918,6 +918,37 @@
 		<value condition="!String.IsEmpty(Container.Art(artist.clearlogo))">$INFO[Container.Art(artist.clearlogo)]</value>
 		<value/>
 	</variable>
+	<variable name="PlayerMPAAImageVar">
+		<value condition="String.Contains(VideoPlayer.mpaa,TV-Y7) | String.Contains(VideoPlayer.mpaa,TV-Y) | String.Contains(VideoPlayer.mpaa,TV-PG) | String.Contains(VideoPlayer.mpaa,TV-G) | String.Contains(VideoPlayer.mpaa,TV-14) | String.Contains(VideoPlayer.mpaa,TV-MA)">flags/mpaa-tv.png</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,PG-13) | String.Contains(Container(60).VideoPlayer.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),PG-13) | String.Contains(VideoPlayer.mpaa,NC-17) | String.Contains(Container(60).VideoPlayer.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),NC-17)">flags/mpaa-long.png</value>
+		<value>flags/mpaa.png</value>
+	</variable>
+	<variable name="PlayerMPAAFlagVar">
+		<value condition="String.Contains(VideoPlayer.mpaa,TV-Y7)">Y7</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,TV-Y)">Y</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,TV-PG)">PG</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,TV-G)">G</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,TV-14)">14</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,TV-MA)">MA</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,Approved) | String.Contains(Container(60).VideoPlayer.mpaa,Approved) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),Approved)">AP</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,Rated R) | String.Contains(Container(60).VideoPlayer.mpaa,Rated R) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),Rated R)">R</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,Rated PG-13) | String.Contains(Container(60).VideoPlayer.mpaa,Rated PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),Rated PG-13)">PG-13</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,Rated PG) | String.Contains(Container(60).VideoPlayer.mpaa,Rated PG) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),Rated PG)">PG</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,Rated G) | String.Contains(Container(60).VideoPlayer.mpaa,Rated G) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),Rated G)">G</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,Rated M) | String.Contains(Container(60).VideoPlayer.mpaa,Rated M) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),Rated M)">M</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,Rated NC-17) | String.Contains(Container(60).VideoPlayer.mpaa,Rated NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),Rated NC-17)">NC-17</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,Not Rated) | String.Contains(Container(60).VideoPlayer.mpaa,Not Rated) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),Not Rated)">NR</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,12) | String.Contains(Container(60).VideoPlayer.mpaa,12) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),12)">12</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,13) | String.Contains(Container(60).VideoPlayer.mpaa,13) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),13)">13</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,14) | String.Contains(Container(60).VideoPlayer.mpaa,14) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),14)">14</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,15) | String.Contains(Container(60).VideoPlayer.mpaa,15) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),15)">15</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,16) | String.Contains(Container(60).VideoPlayer.mpaa,16) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),16)">16</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,18) | String.Contains(Container(60).VideoPlayer.mpaa,18) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),18)">18</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,U) | String.Contains(Container(60).VideoPlayer.mpaa,U) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),U)">U</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,0) | String.Contains(Container(60).VideoPlayer.mpaa,0) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),0)">0</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,6) | String.Contains(Container(60).VideoPlayer.mpaa,6) | String.Contains(Window(Home).Property(PVR.Artwork.VideoPlayer.mpaa),6)">6</value>
+		<value>NR</value>
+	</variable>	
 	<variable name="MPAAImageVar">
 		<value condition="String.Contains(ListItem.mpaa,TV-Y7) | String.Contains(ListItem.mpaa,TV-Y) | String.Contains(ListItem.mpaa,TV-PG) | String.Contains(ListItem.mpaa,TV-G) | String.Contains(ListItem.mpaa,TV-14) | String.Contains(ListItem.mpaa,TV-MA)">flags/mpaa-tv.png</value>
 		<value condition="String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)">flags/mpaa-long.png</value>
@@ -1139,36 +1170,36 @@
 		<value>dialog_tint</value>
 	</variable>
 	<variable name="SkinColorVar">
-		<value condition="Skin.HasSetting(Christmas) + Skin.HasSetting(HolidayThemes)">ff7d0006</value>
+		<value condition="Skin.HasSetting(Christmas) + Skin.HasSetting(HolidayThemes)">fff54040</value>
 		<value condition="Skin.HasSetting(Halloween) + Skin.HasSetting(HolidayThemes)">fff76b00</value>
 		<value condition="Skin.HasSetting(Easter) + Skin.HasSetting(HolidayThemes)">ff009ba3</value>
 		<value condition="Skin.HasSetting(ValentinesDay) + Skin.HasSetting(HolidayThemes)">fffc198f</value>
-		<value condition="Skin.HasSetting(StPatricksDay) + Skin.HasSetting(HolidayThemes)">ff158078</value>
+		<value condition="Skin.HasSetting(StPatricksDay) + Skin.HasSetting(HolidayThemes)">ffceff1d</value>
 		<value condition="Skin.HasSetting(Thanksgiving) + Skin.HasSetting(HolidayThemes)">fff76b00</value>
 		<value condition="Skin.HasSetting(Autumn) + Skin.HasSetting(HolidayThemes)">fff76b00</value>
-		<value condition="Skin.HasSetting(Winter) + Skin.HasSetting(HolidayThemes)">ff4662eb</value>
-		<value condition="Skin.HasSetting(4thOfJuly) + Skin.HasSetting(HolidayThemes)">ff001dff</value>
+		<value condition="Skin.HasSetting(Winter) + Skin.HasSetting(HolidayThemes)">ffbac5f5</value>
+		<value condition="Skin.HasSetting(4thOfJuly) + Skin.HasSetting(HolidayThemes)">ff919dfa</value>
 		<value condition="Skin.HasSetting(NewYearsEve) + Skin.HasSetting(HolidayThemes)">fff0b905</value>
-		<value condition="Skin.HasSetting(Summer) + Skin.HasSetting(HolidayThemes)">ff01630b</value>
-		<value condition="Skin.HasSetting(Spring) + Skin.HasSetting(HolidayThemes)">ff006fab</value>
-		<value condition="Skin.HasSetting(Beach) + Skin.HasSetting(HolidayThemes)">ff006fab</value>
+		<value condition="Skin.HasSetting(Summer) + Skin.HasSetting(HolidayThemes)">ff89f571</value>
+		<value condition="Skin.HasSetting(Spring) + Skin.HasSetting(HolidayThemes)">ff78ccfa</value>
+		<value condition="Skin.HasSetting(Beach) + Skin.HasSetting(HolidayThemes)">ff78ccfa</value>
 		<value condition="!String.IsEmpty(Skin.String(SkinColor))">$INFO[Skin.String(SkinColor)]</value>
 		<value>button_focus</value>
 	</variable>
 	<variable name="GradientColorVar">
-		<value condition="Skin.HasSetting(Christmas) + Skin.HasSetting(HolidayThemes)">fff54040</value>
+		<value condition="Skin.HasSetting(Christmas) + Skin.HasSetting(HolidayThemes)">ff7d0006</value>
 		<value condition="Skin.HasSetting(Halloween) + Skin.HasSetting(HolidayThemes)">fff7a900</value>
 		<value condition="Skin.HasSetting(Easter) + Skin.HasSetting(HolidayThemes)">ff8dfcf5</value>
 		<value condition="Skin.HasSetting(ValentinesDay) + Skin.HasSetting(HolidayThemes)">fffaa0cf</value>
-		<value condition="Skin.HasSetting(StPatricksDay) + Skin.HasSetting(HolidayThemes)">ffceff1d</value>
+		<value condition="Skin.HasSetting(StPatricksDay) + Skin.HasSetting(HolidayThemes)">ff158078</value>
 		<value condition="Skin.HasSetting(Thanksgiving) + Skin.HasSetting(HolidayThemes)">fff7a900</value>
 		<value condition="Skin.HasSetting(Autumn) + Skin.HasSetting(HolidayThemes)">fff7a900</value>
-		<value condition="Skin.HasSetting(Winter) + Skin.HasSetting(HolidayThemes)">ffbac5f5</value>
-		<value condition="Skin.HasSetting(4thOfJuly) + Skin.HasSetting(HolidayThemes)">ff919dfa</value>
+		<value condition="Skin.HasSetting(Winter) + Skin.HasSetting(HolidayThemes)">ff4662eb</value>
+		<value condition="Skin.HasSetting(4thOfJuly) + Skin.HasSetting(HolidayThemes)">ff001dff</value>
 		<value condition="Skin.HasSetting(NewYearsEve) + Skin.HasSetting(HolidayThemes)">ffede27e</value>
-		<value condition="Skin.HasSetting(Summer) + Skin.HasSetting(HolidayThemes)">ff89f571</value>
-		<value condition="Skin.HasSetting(Spring) + Skin.HasSetting(HolidayThemes)">ff78ccfa</value>
-		<value condition="Skin.HasSetting(Beach) + Skin.HasSetting(HolidayThemes)">ff78ccfa</value>		
+		<value condition="Skin.HasSetting(Summer) + Skin.HasSetting(HolidayThemes)">ff01630b</value>
+		<value condition="Skin.HasSetting(Spring) + Skin.HasSetting(HolidayThemes)">ff006fab</value>
+		<value condition="Skin.HasSetting(Beach) + Skin.HasSetting(HolidayThemes)">ff006fab</value>	
 		<value condition="!String.IsEmpty(Skin.String(GradientColor))">$INFO[Skin.String(GradientColor)]</value>
 		<value>gradient_focus</value>
 	</variable>
@@ -2210,6 +2241,7 @@
  		<value condition="Control.HasFocus(444)">$LOCALIZE[20457]$INFO[ListItem.Set, : ]</value>
  		<value condition="Control.HasFocus(13)">$LOCALIZE[31123]</value>
 		<value condition="Control.HasFocus(14)">$LOCALIZE[40000]</value>
+		<value condition="Control.HasFocus(15)">$LOCALIZE[40211]</value>
  		<value condition="Control.HasFocus(102)">$LOCALIZE[31028]</value>
  		<value condition="Control.HasFocus(10)">$LOCALIZE[13511]</value>
  		<value condition="Control.HasFocus(7) | Control.HasFocus(77)">$LOCALIZE[31033]$INFO[ListItem.UserRating, : ]</value>

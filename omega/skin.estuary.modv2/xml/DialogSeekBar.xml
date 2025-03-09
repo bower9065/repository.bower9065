@@ -3,6 +3,7 @@
 	<visible>[$EXP[isSeeking] + !Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + String.IsEqual(Skin.String(currentvideo),VideoPlayer.Title)] | [$EXP[isSeeking] + Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + Skin.HasSetting(SmallOSDVideo)] | [Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5)] | [Player.Paused + !Skin.HasSetting(Hide_OSDInfo)] | Player.ShowInfo | Player.ShowTime | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(PVR.ChannelNumberInput) | Player.HasAudio</visible>
 	<visible>![Window.IsActive(sliderdialog) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrradiordsinfo) | Window.IsVisible(1135) | Window.IsActive(1141)]</visible>
 	<visible>Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)</visible>
+	<visible>!Window.IsVisible(movieinformation) + !Window.IsVisible(script-embuary-person.xml) + !Window.IsVisible(script-embuary-video.xml)</visible>
 	<include>Animation_BottomSlide</include>
 	<depth>DepthOSD</depth>
 	<zorder>0</zorder>
@@ -48,10 +49,11 @@
 				</control>
 			</control>
 			<include condition="Player.HasAudio + !Player.HasVideo">OSDWithInfo</include>
-			<include condition="!String.Contains(Player.Title,trailer) + !Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5)">OSDWithInfo</include>
-			<include condition="!String.Contains(Player.Title,trailer) + !Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + !Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + !Skin.HasSetting(ShowSeekBar)">OSDWithInfo</include>		
-			<include condition="Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + !Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + Skin.HasSetting(ShowSeekBar)">OSDWithoutInfo</include>
-			<include condition="Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + Skin.HasSetting(SmallOSDVideo) + Skin.HasSetting(ShowSeekBar)">OSDWithoutInfo</include>
+			<include condition="!Skin.HasSetting(SmallOSDVideo) + [!String.Contains(Player.Title,trailer) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) | Window.IsVisible(videoosd)]">OSDWithInfo</include>
+			<include condition="!Skin.HasSetting(SmallOSDVideo) + [!String.Contains(Player.Title,trailer) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + !Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + !Skin.HasSetting(ShowSeekBar) | Window.IsVisible(videoosd)]">OSDWithInfo</include>
+	
+			<include condition="[Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + !Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + Skin.HasSetting(ShowSeekBar) + !Window.IsVisible(videoosd)] | Skin.HasSetting(SmallOSDVideo)">OSDWithoutInfo</include>
+			<include condition="[Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + Skin.HasSetting(SmallOSDVideo) + Skin.HasSetting(ShowSeekBar) + !Window.IsVisible(videoosd)] | Skin.HasSetting(SmallOSDVideo)">OSDWithoutInfo</include>
 			<include condition="String.Contains(Player.Title,trailer) + Player.HasVideo">OSDWithoutInfo</include>	
 			<include condition="Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + Player.ShowTime">OSDWithInfo</include>			
 		</control>

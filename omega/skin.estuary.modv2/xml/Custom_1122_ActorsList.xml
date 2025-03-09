@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1122">
-	<defaultcontrol always="true">1</defaultcontrol>
+	<defaultcontrol always="true">11</defaultcontrol>
 	<include>OpenClose_FadeSlide_Right</include>
 	<controls>
 		<control type="group">
@@ -86,7 +86,7 @@
 					<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 				</control>
 			</control>
-			<control type="wraplist" id="11">
+			<control type="list" id="11">
 				<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
 					<param name="left" value="430"/>
 				</include>
@@ -96,6 +96,7 @@
 				<top>88</top>
 				<right>0</right>
 				<height>350</height>
+				<onfocus>SetFocus(9004)</onfocus>
 				<onup>9001</onup>
 				<ondown>SetFocus(800)</ondown>
 				<preloaditems>2</preloaditems>
@@ -106,8 +107,6 @@
 				<include content="FocusPosition" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
 					<param name="focusposition" value="4"/>
 				</include>
-				<autoscroll time="3000">!Control.HasFocus(11)</autoscroll>
-				<scrolltime easing="inout" tween="sine">300</scrolltime>
 				<itemlayout height="300" width="210">
 					<control type="group">
 						<left>30</left>
@@ -140,7 +139,6 @@
 							<texture background="true" fallback="DefaultActorSolid.png">$INFO[ListItem.Icon]</texture>
 							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 							<bordersize>4</bordersize>
-							<visible>!Control.HasFocus(11)</visible>
 						</control>
 						<control type="image">
 							<left>-2</left>
@@ -151,11 +149,105 @@
 							<texture background="true" fallback="DefaultActorSolid.png">$INFO[ListItem.Icon]</texture>
 							<bordertexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</bordertexture>
 							<bordersize>6</bordersize>
-							<visible>Control.HasFocus(11)</visible>
 						</control>
 					</control>
 				</focusedlayout>
 				<content target="video">$VAR[OSDCastVar]</content>
+			</control>		
+			<control type="button" id="9004">
+				<visible>Control.IsVisible(11)</visible>
+				<visible allowhiddenfocus="true">false</visible>
+				<width>1</width>
+				<height>1</height>
+				<texturefocus />
+				<texturenofocus />
+				<onup>SetFocus(9001)</onup>
+				<ondown>SetFocus(800)</ondown>
+				<onleft>SetFocus(11)</onleft>
+				<onleft>Left</onleft>
+				<onleft>SetFocus(9004)</onleft>
+				<onright>SetFocus(11)</onright>
+				<onright>Right</onright>
+				<onright>SetFocus(9004)</onright>
+				<onclick>SetFocus(9006)</onclick>
+			</control>			
+			<control type="group">
+				<visible>ControlGroup(9005).HasFocus()</visible>
+				<animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">WindowOpen</animation>
+				<animation effect="fade" end="0" start="100" time="150">Hidden</animation>
+				<animation effect="fade" end="0" start="100" time="150">WindowClose</animation>
+				<control type="group">
+					<centerleft>50%</centerleft>
+					<height>290</height>
+					<centertop>0%</centertop>
+					<width>650</width>
+					<include content="DialogBackgroundCommons">
+						<param name="width" value="650" />
+						<param name="height" value="80" />
+						<param name="header_label" value="$INFO[Container(11).ListItem.Label]" />
+						<param name="header_id" value="1" />
+					</include>
+					<control type="group">
+						<left>0</left>
+						<top>80</top>
+						<control type="grouplist" id="9005">
+							<width>650</width>
+							<height>210</height>
+							<itemgap>0</itemgap>
+							<control type="button" id="9006">
+								<width>650</width>
+								<textoffsetx>40</textoffsetx>
+								<top>0</top>
+								<height>70</height>
+								<aligny>center</aligny>
+								<align>center</align>
+								<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+								<texturenofocus colordiffuse="dialog_tint">colors/white.png</texturenofocus>
+								<label>$LOCALIZE[31113]</label>
+								<onleft>SetFocus(9004)</onleft>
+								<onright>SetFocus(9004)</onright>
+								<onback>9004</onback>
+								<onclick>SetFocus(11)</onclick>
+								<onclick>SetProperty(ActorLabel,$INFO[Container(11).ListItem.Label],home)</onclick>
+								<onclick>ActivateWindow(1144)</onclick>
+								<onclick>SetFocus(9004)</onclick>
+							</control>
+							<control type="button" id="9007">
+								<width>650</width>
+								<textoffsetx>40</textoffsetx>
+								<top>0</top>
+								<height>70</height>
+								<aligny>center</aligny>
+								<align>center</align>
+								<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+								<texturenofocus colordiffuse="dialog_tint">colors/white.png</texturenofocus>
+								<label>$LOCALIZE[31488]</label>
+								<onleft>SetFocus(9004)</onleft>
+								<onright>SetFocus(9004)</onright>
+								<onback>9004</onback>
+								<onclick>Dialog.Close(MovieInformation)</onclick>
+								<onclick condition="!System.HasAddon(script.embuary.info)">InstallAddon(script.embuary.info)</onclick>
+								<onclick>RunScript(script.embuary.info,call=person,query=$INFO[Container(11).ListItem.Label])</onclick>
+							</control>
+							<control type="button" id="9008">
+								<width>650</width>
+								<textoffsetx>40</textoffsetx>
+								<top>0</top>
+								<height>70</height>
+								<aligny>center</aligny>
+								<align>center</align>
+								<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>
+								<texturenofocus colordiffuse="dialog_tint">colors/white.png</texturenofocus>
+								<label>$LOCALIZE[15067]</label>
+								<onleft>SetFocus(9004)</onleft>
+								<onright>SetFocus(9004)</onright>
+								<onback>9004</onback>
+								<onclick>SetFocus(9004)</onclick>
+							</control>
+						</control>
+					</control>
+				</control>
 			</control>
 			<control type="label">
 				<include content="ItemLeft" condition="![Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">
@@ -168,10 +260,11 @@
 				<right>30</right>
 				<align>center</align>
 				<height>41</height>
-				<font>font12</font>
+				<font>font20</font>
 				<scroll>true</scroll>
 				<label>[B]$INFO[Container(11).ListItem.Label][COLOR white]$INFO[Container(11).ListItem.Label2, $LOCALIZE[20347] ][/COLOR][/B]</label>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<visible>Integer.IsGreater(Container(11).NumItems,0)</visible>
 			</control>
 		</control>

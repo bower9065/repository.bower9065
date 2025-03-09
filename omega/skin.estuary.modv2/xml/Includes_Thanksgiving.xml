@@ -261,7 +261,7 @@
 				<height>390</height>
 				<texture>lights_thanksgiving.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
-		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Thanksgiving) + [!Player.Playing | Window.IsVisible(DialogSeekBar.xml)]</visible>
+		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Thanksgiving)</visible>
 		</control>
 	</include>		
 	<include name="Tree Thanksgiving">		
@@ -272,7 +272,7 @@
 				<height>550</height>
 				<texture>tree_thanksgiving.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
-		<visible>Skin.HasSetting(EnableCharacter) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Thanksgiving) + Window.IsVisible(Home) + [!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(PVRGuideInfo) + !Window.IsActive(PVRRecordingInfo) + !Window.IsActive(PictureInfo) + !Window.IsActive(AddonInformation)]</visible>	
+		<visible>Skin.HasSetting(EnableCharacter) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Thanksgiving) + !Window.IsVisible(script-embuary-person.xml) + !Window.IsVisible(script-embuary-video.xml) + Window.IsVisible(Home) + [!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(PVRGuideInfo) + !Window.IsActive(PVRRecordingInfo) + !Window.IsActive(PictureInfo) + !Window.IsActive(AddonInformation)]</visible>	
 		<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>	
 		</control>
@@ -285,7 +285,7 @@
 				<height>250</height>
 				<texture>turkey.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
-		<visible>Skin.HasSetting(EnableCharacter) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Thanksgiving) + Window.IsVisible(Home) + [!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(PVRGuideInfo) + !Window.IsActive(PVRRecordingInfo) + !Window.IsActive(PictureInfo) + !Window.IsActive(AddonInformation)]</visible>	
+		<visible>Skin.HasSetting(EnableCharacter) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Thanksgiving) + !Window.IsVisible(script-embuary-person.xml) + !Window.IsVisible(script-embuary-video.xml) + Window.IsVisible(Home) + [!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(PVRGuideInfo) + !Window.IsActive(PVRRecordingInfo) + !Window.IsActive(PictureInfo) + !Window.IsActive(AddonInformation)]</visible>	
 		<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>	
 		</control>
