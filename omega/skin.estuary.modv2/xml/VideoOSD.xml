@@ -47,8 +47,9 @@
 				<itemgap>2</itemgap>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>horizontal</orientation>
-				<onup>ActivateWindow(1122)</onup>
+				<onup condition="!String.Contains(Player.Title,trailer)">ActivateWindow(1122)</onup>
 				<ondown>Action(close)</ondown>
+				<ondown> ActivateWindow(VideoPlaylist)</ondown>
 				<onleft>200</onleft>
 				<onright>200</onright>
 				<animation effect="slide" end="-430,0" time="0" condition="[Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)]">Conditional</animation>

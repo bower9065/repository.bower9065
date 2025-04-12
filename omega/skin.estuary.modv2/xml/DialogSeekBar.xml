@@ -49,8 +49,8 @@
 				</control>
 			</control>
 			<include condition="Player.HasAudio + !Player.HasVideo">OSDWithInfo</include>
-			<include condition="!Skin.HasSetting(SmallOSDVideo) + [!String.Contains(Player.Title,trailer) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) | Window.IsVisible(videoosd)]">OSDWithInfo</include>
-			<include condition="!Skin.HasSetting(SmallOSDVideo) + [!String.Contains(Player.Title,trailer) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + !Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + !Skin.HasSetting(ShowSeekBar) | Window.IsVisible(videoosd)]">OSDWithInfo</include>
+			<include condition="!Skin.HasSetting(SmallOSDVideo) + !String.Contains(Player.Title,trailer) + [Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) | Window.IsVisible(videoosd)]">OSDWithInfo</include>
+			<include condition="!Skin.HasSetting(SmallOSDVideo) + !String.Contains(Player.Title,trailer) + [Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + !Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + !Skin.HasSetting(ShowSeekBar) | Window.IsVisible(videoosd)]">OSDWithInfo</include>
 	
 			<include condition="[Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + !Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + Skin.HasSetting(ShowSeekBar) + !Window.IsVisible(videoosd)] | Skin.HasSetting(SmallOSDVideo)">OSDWithoutInfo</include>
 			<include condition="[Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo) + Integer.IsLess(Skin.TimerElapsedSecs(videoinfotimer), 5) + Skin.HasSetting(SmallOSDVideo) + Skin.HasSetting(ShowSeekBar) + !Window.IsVisible(videoosd)] | Skin.HasSetting(SmallOSDVideo)">OSDWithoutInfo</include>

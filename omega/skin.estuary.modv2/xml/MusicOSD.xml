@@ -42,6 +42,7 @@
 				<orientation>horizontal</orientation>
 				<onup>87</onup>
 				<ondown>Action(close)</ondown>
+				<ondown> ActivateWindow(MusicPlaylist)</ondown>
 				<onleft>200</onleft>
 				<onright>200</onright>
 				<control type="radiobutton" id="600">
