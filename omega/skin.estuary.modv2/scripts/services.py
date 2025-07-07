@@ -51,6 +51,18 @@ def viewswitcher(content, view_mode):
 
     return current_content, view_mode
 
+class PlaybackMonitor(xbmc.Player):
+    def onPlayBackStarted(self):
+        if xbmc.getCondVisibility("Player.HasVideo"):
+            timeout = 5000  # ms
+            elapsed = 0
+
+            while xbmc.getCondVisibility("Window.IsActive(busydialog)") and elapsed < timeout:
+                xbmc.sleep(200)
+                elapsed += 200
+
+            # Now activate the window
+            xbmc.executebuiltin("ActivateWindow(12005)")
 
 if __name__ == '__main__':
 
@@ -63,7 +75,7 @@ if __name__ == '__main__':
     xbmc.sleep(1000)
     monitor = xbmc.Monitor()
     xbmc.log('Estuary MOD V2 Nexus service handler started', level=xbmc.LOGINFO)
-
+    playback_monitor = PlaybackMonitor()
     while not monitor.abortRequested():
         if monitor.waitForAbort(0.5): break
 
