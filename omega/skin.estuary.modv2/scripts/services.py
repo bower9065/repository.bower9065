@@ -57,12 +57,11 @@ class PlaybackMonitor(xbmc.Player):
             timeout = 5000  # ms
             elapsed = 0
 
-            while xbmc.getCondVisibility("Window.IsActive(busydialog)") and elapsed < timeout:
-                xbmc.sleep(200)
-                elapsed += 200
-
-            # Now activate the window
-            xbmc.executebuiltin("ActivateWindow(12005)")
+            while not xbmc.getCondVisibility('Window.IsVisible(12005)') and elapsed < timeout:
+                if not xbmc.getCondVisibility("Window.IsActive(busydialog)"):
+                    xbmc.sleep(100)
+                    elapsed += 100
+                    xbmc.executebuiltin("ActivateWindow(12005)")
 
 if __name__ == '__main__':
 
