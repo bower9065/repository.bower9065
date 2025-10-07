@@ -54,13 +54,13 @@ def viewswitcher(content, view_mode):
 class PlaybackMonitor(xbmc.Player):
     def onPlayBackStarted(self):
         if xbmc.getCondVisibility("Player.HasVideo"):
-            timeout = 5000  # ms
+            timeout = 5  # ms
             elapsed = 0
 
             while not xbmc.getCondVisibility('Window.IsVisible(12005)') and elapsed < timeout:
                 if xbmc.getCondVisibility("Window.IsActive(busydialog)") or xbmc.getCondVisibility("Window.IsActive(busydialognocancel)") :
-                    xbmc.sleep(100)
-                    elapsed += 100
+                    xbmc.sleep(500)
+                    elapsed += 1
                 else:
                     break
             if not xbmc.getCondVisibility('Window.IsVisible(12005)'):
