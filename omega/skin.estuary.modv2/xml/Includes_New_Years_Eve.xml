@@ -283,7 +283,7 @@
 				<top>830</top>
 				<width></width>
 				<height>250</height>
-				<texture>new_years_baby.png</texture>
+				<texture>new_years_logo.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 		<visible>Skin.HasSetting(EnableCharacter) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(NewYearsEve) + !Window.IsVisible(script-embuary-person.xml) + !Window.IsVisible(script-embuary-video.xml) + Window.IsVisible(Home) + [!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(PVRGuideInfo) + !Window.IsActive(PVRRecordingInfo) + !Window.IsActive(PictureInfo) + !Window.IsActive(AddonInformation)]</visible>	
 		<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>

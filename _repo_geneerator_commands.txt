@@ -1,2 +1,2 @@
-cd C:\Users\bower\OneDrive\Desktop\GitKraken Repos\repository.bower9065\
+cd C:\Users\bower\Desktop\GitKraken Repos\repository.bower9065
 python "_repo_generator.py"
