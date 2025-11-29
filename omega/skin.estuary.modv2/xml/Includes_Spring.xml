@@ -252,9 +252,9 @@
 	<include name="Lights Spring">		
 		<control type="image">
 				<left>0</left>
-				<top>-120</top>
+				<top>-170</top>
 				<width></width>
-				<height>300</height>
+				<height>350</height>
 				<texture>lights_spring.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Spring)</visible>

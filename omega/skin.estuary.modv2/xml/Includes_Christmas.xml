@@ -256,7 +256,6 @@
 	<include name="Lights Christmas">		
 		<control type="image">
 				<left>0</left>
-				<left>0</left>
 				<top>-170</top>
 				<width></width>
 				<height>390</height>

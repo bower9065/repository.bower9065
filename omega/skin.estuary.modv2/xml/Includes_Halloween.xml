@@ -256,9 +256,9 @@
 	<include name="Lights Halloween">		
 		<control type="image">
 				<left>0</left>
-				<top>-360</top>
+				<top>-170</top>
 				<width></width>
-				<height>780</height>
+				<height>390</height>
 				<texture>lights_halloween.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 		<visible>Skin.HasSetting(EnableStringLights) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Halloween)</visible>	
