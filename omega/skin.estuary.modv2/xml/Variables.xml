@@ -1180,7 +1180,7 @@
 		<value condition="Skin.HasSetting(Winter) + Skin.HasSetting(HolidayThemes)">ffd7defc</value>
 		<value condition="Skin.HasSetting(4thOfJuly) + Skin.HasSetting(HolidayThemes)">ffd90d2b</value>
 		<value condition="Skin.HasSetting(NewYearsEve) + Skin.HasSetting(HolidayThemes)">ffe0ac02</value>
-		<value condition="Skin.HasSetting(Summer) + Skin.HasSetting(HolidayThemes)">fffcdf83</value>
+		<value condition="Skin.HasSetting(Summer) + Skin.HasSetting(HolidayThemes)">ff9adb74</value>
 		<value condition="Skin.HasSetting(Spring) + Skin.HasSetting(HolidayThemes)">ff71d66d</value>
 		<value condition="Skin.HasSetting(Beach) + Skin.HasSetting(HolidayThemes)">ff63e0b7</value>
 		<value condition="!String.IsEmpty(Skin.String(SkinColor))">$INFO[Skin.String(SkinColor)]</value>
@@ -1197,7 +1197,7 @@
 		<value condition="Skin.HasSetting(Winter) + Skin.HasSetting(HolidayThemes)">ff4662eb</value>
 		<value condition="Skin.HasSetting(4thOfJuly) + Skin.HasSetting(HolidayThemes)">ff001dff</value>
 		<value condition="Skin.HasSetting(NewYearsEve) + Skin.HasSetting(HolidayThemes)">ffb0afac</value>
-		<value condition="Skin.HasSetting(Summer) + Skin.HasSetting(HolidayThemes)">ffdeac04</value>
+		<value condition="Skin.HasSetting(Summer) + Skin.HasSetting(HolidayThemes)">ff52d106</value>
 		<value condition="Skin.HasSetting(Spring) + Skin.HasSetting(HolidayThemes)">ffa7d9a5</value>
 		<value condition="Skin.HasSetting(Beach) + Skin.HasSetting(HolidayThemes)">ff42b1ed</value>	
 		<value condition="!String.IsEmpty(Skin.String(GradientColor))">$INFO[Skin.String(GradientColor)]</value>
