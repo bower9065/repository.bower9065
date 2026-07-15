@@ -23,7 +23,7 @@
 	</include>		
 	<include name="Tree Summer">		
 		<control type="image">
-				<left>-1200</left>
+				<left>-1250</left>
 				<top>530</top>
 				<width></width>
 				<height>550</height>

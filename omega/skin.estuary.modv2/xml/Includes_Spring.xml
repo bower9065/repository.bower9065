@@ -262,10 +262,10 @@
 	</include>		
 	<include name="Tree Spring">		
 		<control type="image">
-				<left>-1100</left>
-				<top>630</top>
+				<left>-1250</left>
+				<top>580</top>
 				<width></width>
-				<height>450</height>
+				<height>500</height>
 				<texture>tree_spring.png</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 		<visible>Skin.HasSetting(EnableCharacter) + Skin.HasSetting(HolidayThemes) + Skin.HasSetting(Spring) + !Window.IsVisible(script-embuary-person.xml) + !Window.IsVisible(script-embuary-video.xml) + Window.IsVisible(Home) + [!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(PVRGuideInfo) + !Window.IsActive(PVRRecordingInfo) + !Window.IsActive(PictureInfo) + !Window.IsActive(AddonInformation)]</visible>	

@@ -266,8 +266,8 @@
 	</include>		
 	<include name="Tree Winter">		
 		<control type="image">
-				<left>-1100</left>
-				<top>430</top>
+				<left>-1200</left>
+				<top>460</top>
 				<width></width>
 				<height>650</height>
 				<texture>tree_winter.png</texture>

@@ -256,7 +256,7 @@
 	<include name="Lights Autumn">		
 		<control type="image">
 				<left>0</left>
-				<top>-300</top>
+				<top>-320</top>
 				<width></width>
 				<height>520</height>
 				<texture>lights_autumn.png</texture>
@@ -268,7 +268,7 @@
 	</include>		
 	<include name="Tree Autumn">		
 		<control type="image">
-				<left>-1100</left>
+				<left>-1150</left>
 				<top>530</top>
 				<width></width>
 				<height>550</height>

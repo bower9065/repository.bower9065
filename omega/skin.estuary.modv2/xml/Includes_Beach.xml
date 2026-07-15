@@ -23,7 +23,7 @@
 	</include>		
 	<include name="Tree Beach">		
 		<control type="image">
-				<left>-1100</left>
+				<left>-1200</left>
 				<top>530</top>
 				<width></width>
 				<height>550</height>
