@@ -1,29 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
 <addons>
-	<addon id="script.estuary.modv2_theme_selector" name="Estuary Mod V2 Theme Selector" version="1.1.0" provider-name="Bower9065">
-		<requires>
-			<import addon="xbmc.python" version="3.0.0" />
-		</requires>
-		<extension point="xbmc.python.script" library="script.py">
-			<provides>executable</provides>
-		</extension>
-		<extension point="xbmc.addon.metadata">
-			<language />
-			<summary lang="en">Change Bower9065's Estuary Mod V2 themes from Home Assistant</summary>
-			<description lang="en">Uses Kodi integration. See README.md for Home Assistant example service-call.</description>			
-			<platform>all</platform>
-			<website />
-			<source>https://github.com/bower9065/script.estuary.modv2_theme_selector/tree/main</source>
-			<forum />
-			<email /> 
-			<assets>
-				<icon>resources/icon.png</icon>
-				<fanart>resources/fanart.jpg</fanart>
-				<screenshot />
-			</assets>		
-		</extension>
-	</addon>
-	<addon id="skin.estuary.modv2" version="1.0.77" name="Estuary MOD V2" provider-name="Bower9065">
+	<addon id="script.estuary.modv2_theme_selector" name="Estuary Mod V2 Theme Selector" version="1.1.1" provider-name="Bower9065">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+	</requires>
+	<extension point="xbmc.python.script" library="script.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<language />
+		<summary lang="en">Change Bower9065's Estuary Mod V2 themes from Home Assistant</summary>
+		<description lang="en">Uses Kodi integration. See README.md for Home Assistant example service-call.</description>			
+		<platform>all</platform>
+		<website />
+		<source>https://github.com/bower9065/script.estuary.modv2_theme_selector/tree/main</source>
+		<forum />
+		<email /> 
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot />
+		</assets>		
+	</extension>
+</addon><addon id="skin.estuary.modv2" version="1.0.77" name="Estuary MOD V2" provider-name="Bower9065">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1" />
 		<import addon="xbmc.gui" version="5.17.0" />
